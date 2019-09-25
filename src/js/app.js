@@ -5,10 +5,20 @@ import {
 } from './settings.js';
 import Product from './components/Product.js';
 import Cart from './components/Cart.js';
+import Booking from './components/Booking.js';
 
 
 
 const app = {
+
+    initBooking: function(){
+        const thisApp = this;
+        const bookingWidgetElem = document.querySelector(select.containerOf.booking);
+
+        thisApp.bookingWidget = new Booking(bookingWidgetElem);
+    },
+
+
     initPages: function(){
         const thisApp = this;
 
@@ -46,6 +56,9 @@ const app = {
             });
         }
     },
+    
+
+
 
     activatePage: function(pageId){
         const thisApp = this;
@@ -124,6 +137,8 @@ const app = {
         thisApp.initData();
 
         thisApp.initCart();
+
+        thisApp.initBooking();
     },
 
 };
