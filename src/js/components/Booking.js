@@ -39,7 +39,7 @@ class Booking {
 
     thisBooking.datePicker.dom.input.addEventListener('input', function(){
       if (bookedTable.length > 0) {
-        tables[bookedTable-1].classList.remove(booked);
+        tables[bookedTable-1].classList.remove('booked');
       }
     });
     thisBooking.dom.bookButton.addEventListener('submit', function(){
@@ -70,11 +70,11 @@ class Booking {
       body: JSON.stringify(payload),
     };
     fetch(url, options)
-    .then(function(response){
-      return response.json();
-    }).then(function(parsedResponse){
-      console.log('parsedResponse: ', parsedResponse);
-    });
+      .then(function(response){
+        return response.json();
+      }).then(function(parsedResponse){
+        console.log('parsedResponse: ', parsedResponse);
+      });
   }
 
 
