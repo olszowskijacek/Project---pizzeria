@@ -43,8 +43,8 @@ class Booking {
       }
     });
     thisBooking.dom.bookButton.addEventListener('submit', function(){
-      thisBooking.sendBooking();
       event.preventDefault();
+      thisBooking.sendBooking();
     });
   }
   
@@ -57,7 +57,7 @@ class Booking {
       hour: thisBooking.hourPicker.correctValue,
       duration: thisBooking.hoursAmount.correctValue,
       ppl: thisBooking.peopleAmount.correctValue,
-      table: thisBooking.parseInt(thisBooking.table),
+      table: parseInt(thisBooking.table),
       repeat: false,
       id: '',
     };
