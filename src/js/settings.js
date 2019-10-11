@@ -12,6 +12,9 @@ export const select = {
     cart: '#cart',
     pages: '#pages',
     booking: '.booking-wrapper',
+    home: '.container__home',
+    rangeSlider: '.rangeSLider',
+    rangeWrapper: '.main-range'
   },
   all: {
     menuProducts: '#product-list > .product',
@@ -65,6 +68,7 @@ export const select = {
     peopleAmount: '.people-amount',
     hoursAmount: '.hours-amount',
     tables: '.floor-plan .table',
+    tablesReserved: '.floor-plan .table.reservation',
     form: '.booking-form'
   },
   nav: {
@@ -91,6 +95,12 @@ export const classNames = {
   pages: {
     active: 'active',
   },
+  rangeSLider: {
+    allOccupied: 'allOccupied',
+    oneFree: 'oneFree',
+    allFree: 'allFree',
+    half: 'half'
+  }
 };
 
 export const settings = {
@@ -115,7 +125,7 @@ export const settings = {
   // CODE ADDED END
   //Add API//
   db: {
-    url: '//localhost:3131',
+    url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : ''),
     product: 'product',
     order: 'order',
     booking: 'booking',

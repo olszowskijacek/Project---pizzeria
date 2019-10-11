@@ -47,6 +47,9 @@ class Booking {
       thisBooking.sendBooking();
     });
   }
+
+
+  
   
   sendBooking(){
     const thisBooking = this;
@@ -165,14 +168,10 @@ class Booking {
         }
       }
     }
-
-    
-
     // console.log('thisBooking.booked ', thisBooking.booked);
 
     thisBooking.updateDOM();
   }
-
   makeBooked(date, hour, duration, table){
     const thisBooking = this;
 
@@ -231,6 +230,8 @@ class Booking {
     }
 
   }
+
+      
 
   render(element){
     const thisBooking = this;
